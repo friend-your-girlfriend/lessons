@@ -13,6 +13,7 @@ public class fourthLesson {
         getCenterPointOfSum(fourthArray);
         checkIsSortedArray(fourthArray);
         reverseArray(fourthArray);
+        System.out.println(Arrays.toString(fourthArray));
     }
 
     public static void getSumArray(int[]... array) {
