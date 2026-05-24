@@ -1,14 +1,26 @@
 package ru.otus.java.basic.animals;
 
-import java.sql.SQLOutput;
-import java.util.SortedMap;
-
-public class Animal {
+public abstract class Animal {
     String name;
     float runningSpeed;
     float swimmingSpeed;
-    int stamina;
+    float stamina;
 
+    public String getName() {
+        return name;
+    }
+
+    public float getRunningSpeed() {
+        return runningSpeed;
+    }
+
+    public float getSwimmingSpeed() {
+        return swimmingSpeed;
+    }
+
+    public float getStamina() {
+        return stamina;
+    }
     public Animal(String name, float runningSpeed, float swimmingSpeed, int stamina) {
         this.name = name;
         this.runningSpeed = runningSpeed;
@@ -16,25 +28,12 @@ public class Animal {
         this.stamina = stamina;
     }
 
-    public void printInfo() {
-        System.out.println("Имя: "+ name);
-        System.out.println("Скорость бега: " + runningSpeed);
-        System.out.println("Скорость плавания: " + swimmingSpeed);
-        System.out.println("Выносливость: " + stamina);
-    }
+    public abstract void info();
 
-    public float run(int distance) {
-        int tempStamina = stamina - distance;
+    public abstract float run(int distance);
+    public abstract float swim(int distance);
 
-        if (tempStamina <= 0) {
-            System.out.println("Время: -1");
-            return -1;
-        }
+    public abstract float wasteStamina(int distance, int staminaCosts);
 
-        stamina = tempStamina;
-
-        System.out.println(name + " пробежал");
-        return distance - runningSpeed;
-    }
-
+    public abstract float spendTime(int distance, float stamina, String action);
 }
