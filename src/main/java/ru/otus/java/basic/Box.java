@@ -1,17 +1,15 @@
 package ru.otus.java.basic;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class Box {
-    private int lenght;
+    private int length;
     private int height;
     private int width;
     private String color;
     private String item;
     boolean isOpen;
 
-    public Box(int lenght, int height, int width, String color) {
-        this.lenght = lenght;
+    public Box(int length, int height, int width, String color) {
+        this.length = length;
         this.height = height;
         this.width = width;
         this.color = color;
@@ -36,7 +34,7 @@ public class Box {
 
     public void printInfo() {
         System.out.println("-------------");
-        System.out.println("Размер: " + lenght + "x" + width + "x" + height);
+        System.out.println("Размер: " + length + "x" + width + "x" + height);
         System.out.println("Цвет: " + color);
 
         if (isOpen) {
@@ -45,7 +43,7 @@ public class Box {
             System.out.println("Коробка закрыта");
         }
 
-        if (item == "empty") {
+        if (item.equals("empty")) {
             System.out.println("Коробка пустая");
         } else {
             System.out.println("В коробке предмет: " + item);
@@ -59,7 +57,7 @@ public class Box {
             System.out.println("Невозможно положить предмет, коробка закрыта");
             return;
         }
-        if (this.item != "empty") {
+        if (!this.item.equals("empty")) {
             System.out.println("Невозможно положить предмет, коробка не пустая");
             return;
         }
@@ -72,7 +70,7 @@ public class Box {
         if (!isOpen) {
             System.out.println("Невозможно достать предмет, коробка закрыта");
         }
-        if (item == "empty") {
+        if (item.equals("empty")) {
             System.out.println("Невозможно достать предмет, коробка пуста");
         }
 
