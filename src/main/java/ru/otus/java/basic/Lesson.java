@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Lesson {
     public static void main(String[] args) {
-        greatings();
+        greetings();
         checkSign(1, 2, 3);
         selectColor();
         compareNumbers();
@@ -17,7 +17,7 @@ public class Lesson {
         initMethod(number);
     }
 
-    public static void greatings() {
+    public static void greetings() {
         System.out.println("Hello\nWorld\nfrom\nJava");
     }
 
@@ -38,7 +38,7 @@ public class Lesson {
             System.out.println("Красный");
         } else if (data > 10 && data <= 20) {
             System.out.println("Желтый");
-        } else if (data >= 20) {
+        } else {
             System.out.println("Зеленый");
         }
     }
@@ -55,7 +55,7 @@ public class Lesson {
     }
 
     public static void addOrSubstractAndPrint(int initValue, int delta, boolean increment) {
-        if (increment == true) {
+        if (increment) {
             System.out.println(initValue + delta);
         } else {
             System.out.println(initValue - delta);
@@ -64,30 +64,30 @@ public class Lesson {
 
     public static void initMethod(int number) {
         switch (number) {
-            case (1):
+            case 1:
                 System.out.println("Метод: greatings()");
-                greatings();
+                greetings();
                 break;
-            case (2):
+            case 2:
                 int a = (int) (Math.random() * 10);
                 int b = (int) (Math.random() * 10);
                 int c = (int) (Math.random() * 10);
                 System.out.println("Метод: checkSign()");
                 checkSign(a, b, c);
                 break;
-            case (3):
+            case 3:
 
                 System.out.println("Метод: selectColor()");
                 selectColor();
                 break;
-            case (4):
+            case 4:
                 System.out.println("Метод: compareNumbers()");
                 compareNumbers();
                 break;
-            case (5):
+            case 5:
                 int initValue = (int) (Math.random() * 10);
                 int delta = (int) (Math.random() * 10);
-                boolean increment = (((int) (Math.random() * (1 - 0 + 1)) + 0) == 0);
+                boolean increment = (Math.random() <= 0.5);
 
                 System.out.println("Метод: addOrSubstractAndPrint()");
                 addOrSubstractAndPrint(initValue, delta, increment);
