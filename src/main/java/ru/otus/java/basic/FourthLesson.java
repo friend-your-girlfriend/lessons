@@ -2,7 +2,7 @@ package ru.otus.java.basic;
 
 import java.util.Arrays;
 
-public class fourthLesson {
+public class FourthLesson {
     public static void main(String[] args) {
         int[] firstArray = new int[]{1, 2, 3};
         int[] secondArray = new int[]{2, 2};

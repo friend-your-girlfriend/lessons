@@ -1,6 +1,6 @@
 package ru.otus.java.basic;
 
-public class fifthLesson {
+public class FifthLesson {
     public static void main(String[] args) {
         int[][] intArray = {
                 {0, -3, 5},
@@ -13,23 +13,24 @@ public class fifthLesson {
         System.out.println("Сумма второй строки: " + sumOfSecondRow(intArray));
 
 
-        printArray(drawSquare(6));
+        printArray(toSquare(6));
         printArray(zeroDiagonal(intArray));
     }
 
     public static int sumOfPositiveElement(int[][] array) {
         int sum = 0;
 
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                if (array[i][j] > 0)
-                    sum += array[i][j];
+        for (int[] row : array) {
+            for (int element: row) {
+                if (element >= 0) {
+                    sum += element;
+                }
             }
         }
         return sum;
     }
 
-    public static char[][] drawSquare(int size) {
+    public static char[][] toSquare(int size) {
         char[][] array = new char[size][size];
 
         for (int i = 0; i < size; i++) {
