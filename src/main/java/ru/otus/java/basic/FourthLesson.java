@@ -49,7 +49,7 @@ public class FourthLesson {
             if (leftSum == rightSum) {
                 System.out.println("Точка находится между элементами: " + array[i] + " и " + array[i + 1]);
             } else {
-                rightSum = 0;
+                break;
             }
         }
     }
