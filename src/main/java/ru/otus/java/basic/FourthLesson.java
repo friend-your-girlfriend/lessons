@@ -2,7 +2,7 @@ package ru.otus.java.basic;
 
 import java.util.Arrays;
 
-public class fourthLesson {
+public class FourthLesson {
     public static void main(String[] args) {
         int[] firstArray = new int[]{1, 2, 3};
         int[] secondArray = new int[]{2, 2};
@@ -59,8 +59,9 @@ public class fourthLesson {
             if (array[i] > array[i + 1]) {
                 System.out.println("Элементы массива не идут в порядке возрастания");
                 break;
-            } else if (array[i] <= array[i + 1] && array[i + 1] == array.length)
+            } else if (array[i] <= array[i + 1] && array[i + 1] == array.length) {
                 System.out.println("Массив в порядке возрастания");
+            }
         }
     }
 
