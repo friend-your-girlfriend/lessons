@@ -27,7 +27,7 @@ public class Dog extends Animal {
     }
     @Override
     public float wasteStamina(int distance, int staminaCosts) {
-        return (float)(distance / staminaCosts);
+        return (float)(distance * staminaCosts);
     }
 
     @Override
@@ -39,7 +39,7 @@ public class Dog extends Animal {
         this.stamina = stamina;
         if (action == "run") {
             return distance / runningSpeed;
-        } else if (action == "swim") {
+        } else if (action.equals("swim")) {
             return distance / swimmingSpeed;
         } else {
             return -1;
