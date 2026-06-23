@@ -1,8 +1,12 @@
 package ru.otus.java.basic;
 
 public class Plate {
-    int maxAmountFood;
-    int currentAmountFood;
+    private int maxAmountFood;
+    private int currentAmountFood;
+
+    public int getCurrentAmountFood() {
+        return currentAmountFood;
+    }
 
     public Plate(int maxAmountFood) {
         this.maxAmountFood = maxAmountFood;
@@ -21,7 +25,7 @@ public class Plate {
     }
 
     public boolean decreaseFood(int food) {
-        if (currentAmountFood - food <= 0) {
+        if (currentAmountFood - food < 0) {
             return false;
         }
 

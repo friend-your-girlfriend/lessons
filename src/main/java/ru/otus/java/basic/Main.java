@@ -19,7 +19,7 @@ public class Main {
 
         for (int i = 0; i < plates.length; i++) {
             for (int j = 0; j < cats.length; j++) {
-                if (plates[i].currentAmountFood == 0) {
+                if (plates[i].getCurrentAmountFood() == 0) {
                     break;
                 }
 

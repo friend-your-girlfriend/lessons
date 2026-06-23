@@ -1,8 +1,5 @@
 package ru.otus.java.basic.animals;
 
-import java.sql.SQLOutput;
-import java.util.SortedMap;
-
 public class Animal {
     String name;
     float runningSpeed;
