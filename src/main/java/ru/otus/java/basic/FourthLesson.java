@@ -13,6 +13,7 @@ public class FourthLesson {
         getCenterPointOfSum(fourthArray);
         checkIsSortedArray(fourthArray);
         reverseArray(fourthArray);
+        System.out.println(Arrays.toString(fourthArray));
     }
 
     public static void getSumArray(int[]... array) {
@@ -59,9 +60,8 @@ public class FourthLesson {
             if (array[i] > array[i + 1]) {
                 System.out.println("Элементы массива не идут в порядке возрастания");
                 break;
-            } else if (array[i] <= array[i + 1] && array[i + 1] == array.length) {
+            } else if (array[i] <= array[i + 1] && array[i + 1] == array.length)
                 System.out.println("Массив в порядке возрастания");
-            }
         }
     }
 
